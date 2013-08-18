@@ -6,14 +6,12 @@
 <struts>
 	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
 	<constant name="struts.devMode" value="false" />
-
 	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
-
+	
 	<package name="default" extends="struts-default" namespace="/">
-
-		<action name="login" class="net.playground.struts2.LoginAction">
-			<result name="success">pages/Welcome.jsp</result>
-			<result name="error">pages/Login.jsp</result>
+		<action name="calculate" class="net.playground.struts2.CalculateAction">
+			<result name="success">OutputPage.jsp</result>
+			<result name="input">InputPage.jsp</result>
 		</action>
 	</package>
 </struts>
